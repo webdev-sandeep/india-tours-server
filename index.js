@@ -19,7 +19,7 @@ app.use('/users',userRouter)
 app.use('/tour',tourRouter)
 
 app.get('/',(req,res)=>{
-    res.send(`<h1>Hello from server!</h1>`)
+    res.send(`<h1>Welcome to the API!</h1>`)
 })
 
 
