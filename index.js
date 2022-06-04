@@ -19,13 +19,13 @@ app.use('/users',userRouter)
 app.use('/tour',tourRouter)
 
 app.get('/',(req,res)=>{
-    res.send(`<h1>Welcome to the API!</h1>`)
+    res.send('Welcome to the API!')
 })
 
 
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
-        app.listen(process.env.PORT || 5000,'0.0.0.0',()=>console.log(`Listening to the server at : http://localhost:${port}`))
+        app.listen(process.env.PORT || 5000,'0.0.0.0',()=>console.log(`Listening to the server at : http://localhost:${process.env.PORT}`))
     })
     .catch((error)=>console.log(error))
