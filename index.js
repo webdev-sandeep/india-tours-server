@@ -26,6 +26,6 @@ app.get('/',(req,res)=>{
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
-        app.listen(process.env.PORT || 5000,'0.0.0.0',()=>console.log(`Listening to the server at : http://localhost:${process.env.PORT}`))
+        app.listen(process.env.PORT || 5000,'0.0.0.0',()=>console.log(`Listening to the server at : http://localhost:${process.env.PORT || 5000}`))
     })
     .catch((error)=>console.log(error))
